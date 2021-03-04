@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 
-{% block content %} 
+{% block content %}
+
 {% load humanize %}
-{% load static %}
 
 <!-- Sub banner start -->
 <div class="sub-banner overview-bgi">
@@ -33,7 +33,7 @@
                             </h6>
                         </div>
                         <div class="pull-right">
-                            <h3><span>₹ {{single_car.price|intcomma}}</span></h3>
+                            <h3><span>$ {{single_car.price | intcomma}}</span></h3>
                         </div>
                     </div>
                     <div id="carDetailsSlider" class="carousel car-details-sliders slide mb-40">
@@ -102,7 +102,7 @@
                             </ul>
                         </div>
                     </div>
-                    
+
                     <!-- Tabbing box start -->
                     <div class="tabbing tabbing-box mb-40">
                         <ul class="nav nav-tabs" id="carTab" role="tablist">
@@ -122,7 +122,7 @@
                                     <p>
                                       {{single_car.description | safe }}
                                     </p>
-                               </div>
+                                </div>
                             </div>
                             <div class="tab-pane fade" id="two" role="tabpanel" aria-labelledby="two-tab">
                                 <div class="features-info mb-50">
@@ -130,22 +130,22 @@
                                     <div class="row">
                                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                             <ul>
-                                               {% for disp in single_car.features %}
                                                 <li>
-                                                    {{disp}}
+                                                    {{single_car.features}}
                                                 </li>
-                                                {% endfor %} 
+
                                             </ul>
                                         </div>
-                                        
+
+
                                     </div>
                                 </div>
                             </div>
-                           
+
                         </div>
                     </div>
-                        
-                    
+
+
                 </div>
             </div>
             <div class="col-lg-4 col-md-12">
@@ -232,18 +232,18 @@
                                   </div>
                                 </div>
                                   <div class="form-group">
-                                      <select class="form-control" id="sel1" name="customer_need">
-                                        <option value="I'm interested in this">I'm interested in this</option>
-                                        <option value="I'd like to know your best price for this">I'd like to know your best price for this</option>
-                                        <option value="I'd like to test drive this">I'd like to test drive this</option>
-                                        <option value="I'd like a history report for this">I'd like a history report for this</option>
+                                      <select class="form-control" id="sel1">
+                                        <option>I'm interested in this</option>
+                                        <option>I'd like to know your best price for this</option>
+                                        <option>I'd like to test drive this</option>
+                                        <option>I'd like a history report for this</option>
                                       </select>
                                     </div>
-                                
+
                                 <div class="form-group">
-                                  <input type="text" name="car_title" class="form-control" value="LAMBORGHINI HURACÁN." readonly>
+                                  <input type="text" name="zipcode" class="form-control" value="LAMBORGHINI HURACÁN." readonly>
                                 </div>
-                               
+
                                 <div class="form-group">
                                   <label for="name" class="col-form-label">I live in</label>
                                   <div class="row">
@@ -304,12 +304,11 @@
                             </ul>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
     </div>
 </div>
 <!-- Properties details page end -->
-
-{% endblock content %}
+{% endblock %}
