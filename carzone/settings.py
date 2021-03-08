@@ -33,6 +33,7 @@ LOGIN_REDIRECT_URL = 'dashboard'
 # Application definition
 
 INSTALLED_APPS = [
+    'contacts.apps.ContactsConfig',
     'accounts.apps.AccountsConfig',
     'cars.apps.CarsConfig',
     'pages.apps.PagesConfig',
@@ -151,3 +152,16 @@ MESSAGE_TAGS = {
 }
 
 SITE_ID = 1
+
+
+
+
+
+
+
+# Email sending
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'techcreamy@gmail.com'
+EMAIL_HOST_PASSWORD = 'HelloWorld1234@5'
+EMAIL_USE_TLS = True
